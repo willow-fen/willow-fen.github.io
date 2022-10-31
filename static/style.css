@@ -1,0 +1,73 @@
+h1,h2,h3,h4,h5,h6 {
+	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+}
+
+header {
+	position: relative;
+	background-color: white;
+	height: 30vh;
+	min-height: 20rem;
+	width: 100%;
+	overflow: hidden;
+}
+.logo {
+	height: 30vh;
+	min-height: 20rem;
+}
+
+header video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background-color: #407BC3;
+}
+
+header .container-fluid {
+	height: 30vh;
+	min-height: 30rem;
+	position: relative;
+	z-index: 2;
+}
+
+.citation {
+	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+}
+
+
+.quote_box {
+	background-color: #BE6B3C;
+}
+.section-heading span {
+	border-bottom: 4px solid #0C596F;
+}
+.section-heading {
+	margin-bottom: 1.5rem;
+}
+
+.text-faded {
+	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 1.2rem;
+	line-height: 1.2;
+}
+.container {
+	max-width: 960px;
+}
+
+.dark {
+	background-color: rgb(244,244,244) !important
+
+}
+
+.filter-logo{
+	filter: drop-shadow( 1px 1px 12px rgba(255, 255, 255, .6));
+}
