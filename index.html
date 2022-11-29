@@ -9,35 +9,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="static/style.css" rel="stylesheet">
         <script defer id="mcjs">function showMailingPopUp() {
+		console.log("hiding...");
+		var Offcanvas = document.getElementById('offcanvasNavbar')
+		var bsOffcanvas = new bootstrap.Offcanvas(Offcanvas)
+		bsOffcanvas.show();
+		bsOffcanvas.hide();
                 console.log("HERE");
                 !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8373aa667d75793a030cb1ab2/702dbac68eb322c7800eb45aa.js");
                 //unsetting the cookie
-    document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		    document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		    document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		    // hide the backdrop - TODO, but of a hack
+			const elements = document.getElementsByClassName('modal-backdrop');
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
                 }
                 window.onload = function(){
                         console.log("Setting handler");
                 /*document.getElementById('open-popup').onclick = function() {console.log("HERE");showMailingPopUp();};*/
-                        document.getElementById('open-popup').onclick = function(){showMailingPopUp();};
+                        document.getElementById('open-popup1').onclick = function(){showMailingPopUp();};
+                        document.getElementById('open-popup2').onclick = function(){showMailingPopUp();};
                         }
         </script>
 	  <title>Willow Fen Forest School</title>
   </head>
   <body>
-	  <div id="fb-root"></div>
+<div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="L8sDlOHM"></script>
-	  <header class="shadow">
+<nav class="navbar navbar-light d-flex align-items-start">
 		  <video poster="/images/poster.jpg" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
 		    <source src="/images/trimmed.mp4" type="video/mp4">
 		  </video>
-		  <div class="container-fluid">
-			  <div class="row">
-				  <div class="col-md-4 offset-md-1 image_container">
+				  <div class="col-md-3 offset-md-1 my-auto">
 					  <img class="logo filter-logo" src="images/logo.svg">
+				 </div>
+				 <div class="ms-auto me-3" style="z-index: 1000">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+				    </button>
 				  </div>
-			  </div>
-		  </div>
-	  </header>
+</nav>
 <section>
 	<div class="container-fluid">
 		<div class="row shadow quote_box">
@@ -51,10 +63,51 @@
 		    
 	</div>
 </section>
+<!---<nav class="navbar bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+  </div>
+</nav>-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="/">❧ Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Forest School</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Site</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sessions & Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Policies & Documents</a>
+          </li>
+          <li class="nav-item nav-item-last">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+	<div class="row my-5">
+		<div class="col d-flex align-items-center justify-content-center">
+			<button type="button" class="btn btn-mygreen" id="open-popup1">Subscribe</button> 
+		</div>
+	</div>
+
+      </div>
+    </div>
 <section>
 	<div class="py-4 container">
 		<div class="row">
 			<div class="mx-auto">
+
+
 			<img src="/images/profile.jpg" class="mx-4 float-end border-4 shadow-sm" />
 			<p>Welcome to Willow Fen Forest School! We provide forest school sessions in beautiful secluded Suffolk countryside in Thorndon, near Eye.</p>
 			<p>I am Gemma Snape and I am nearing the end of my Level 3 Forest School Leader training. I am working with Thorndon CEVC Primary School to deliver Forest School style activities while the remaining paperwork gets signed off, and will soon be delivering full Forest School sessions to the school and others in the community. I used to be a primary school teacher in Ipswich, before having my two boys who will probably join us for most of our sessions!</p>
@@ -66,7 +119,7 @@
 	<div class="container-fluid shadow-sm">
 		<div class="row">
 			<div class="mx-auto py-4 text-center dark">
-			Sign up to find out when sessions begin - <button type="button" class="btn btn-success" id="open-popup">Subscribe</button> 
+			Sign up to find out when sessions begin - <button type="button" class="btn btn-mygreen" id="open-popup2">Subscribe</button> 
 			</div>
 		</div>
 	</div>
@@ -97,6 +150,7 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.4568168549017!2d1.1320335163592246!3d52.28721047977073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9bf390651bb0d%3A0x7827e59fc79766e3!2sWillow%20Fen%20Forest%20School!5e1!3m2!1sen!2suk!4v1667333753361!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 	</div>
+
 </section>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
