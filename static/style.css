@@ -2,7 +2,8 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 }
 
-header {
+
+nav {
 	position: relative;
 	background-color: white;
 	height: 30vh;
@@ -10,12 +11,13 @@ header {
 	width: 100%;
 	overflow: hidden;
 }
+
 .logo {
-	height: 30vh;
-	min-height: 20rem;
+	height: 20vh;
+	min-height: 17rem;
 }
 
-header video {
+nav video {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -31,13 +33,20 @@ header video {
 	background-color: #407BC3;
 }
 
-header .container-fluid {
-	height: 30vh;
+nav .container-fluid {
+/*	height: 30vh;
 	min-height: 30rem;
-	position: relative;
+	position: relative;*/
 	z-index: 2;
 }
 
+nav .navbar-toggler {
+	z-index: 2;
+}
+nav .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+	display: inline-block !important;
+}
 .citation {
 	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 	color: rgba(255, 255, 255, 0.8);
@@ -45,8 +54,21 @@ header .container-fluid {
 
 
 .quote_box {
-	background-color: #BE6B3C;
+	background-color: #3A5E3D;
+	/*background-color: #BE6B3C;*/
 }
+
+.btn-mygreen {
+	color: #fff;
+	background-color: #3A5E3D;
+	border-color: #345436;
+}
+
+.btn-mygreen:hover {
+	color: #eee;
+}
+
+
 .section-heading span {
 	border-bottom: 4px solid #0C596F;
 }
@@ -71,4 +93,88 @@ header .container-fluid {
 
 .filter-logo{
 	filter: drop-shadow( 1px 1px 12px rgba(255, 255, 255, .6));
+}
+
+#navbarToggleExternalContent {
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+
+.nav-item {
+	border-top: 1px solid #0C596F;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.nav-item-last {
+	border-bottom: 1px solid #0C596F;
+}
+
+.nav-item.active {
+	background-color: RGBA(156,186,167,0.3);
+}
+
+.nav-item:hover {
+	background-color: RGBA(156,186,167,0.3);
+	color: black !important;
+}
+
+.nav-link:focus {
+	color: black !important;
+}
+
+.nav-link:hover {
+	color: black !important;
+}
+.nav-item a {
+	color: black;
+	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.callout {
+	padding: 1.25rem;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	border: 1px solid #e9ecef;
+	border-left-width: .25rem;
+	border-radius: .25rem;
+}
+
+.carousel-inner {
+	text-align:center;
+	background-color: black;
+}
+.carousel-item {
+	text-align: center;
+}
+.carousel-item img{
+  margin-left: auto;
+  margin-right: auto;
+  max-height:50vh;
+	width: auto !important;
+}
+
+li.spaced {
+	margin-top: 15px;
+}
+
+.form-label-outdent {
+	padding-left: 0px !important;
+	margin-left: -8px;
+}
+.light-underline {
+	border-bottom: 1px solid rgba(12, 89, 111, 1);
 }
