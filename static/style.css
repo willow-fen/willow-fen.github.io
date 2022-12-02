@@ -140,3 +140,41 @@ nav .navbar-toggler-icon {
 	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
+.callout {
+	padding: 1.25rem;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	border: 1px solid #e9ecef;
+	border-left-width: .25rem;
+	border-radius: .25rem;
+}
+
+.carousel-inner {
+	text-align:center;
+	background-color: black;
+}
+.carousel-item {
+	text-align: center;
+}
+.carousel-item img{
+  margin-left: auto;
+  margin-right: auto;
+  max-height:50vh;
+	width: auto !important;
+}
+
+li.spaced {
+	margin-top: 15px;
+}
+
+.form-label-outdent {
+	padding-left: 0px !important;
+	margin-left: -8px;
+}
+.light-underline {
+	border-bottom: 1px solid rgba(12, 89, 111, 1);
+}
